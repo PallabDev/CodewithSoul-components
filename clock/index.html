@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Clock</title>
+      <link rel="stylesheet" href="style.css">
+      
+      <style id="clock-animate"></style>
+      
+   </head>
+   <body>
+     <div class="clock-container">
+
+       <div class="size">
+         
+         
+         <div class="clock">
+           <div class="center-nut"></div>
+           <div class="center-nut2"></div>
+           <div class="indicator">
+             <div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="sec-hand"></div>
+          <div class="min-hand"></div>
+          <div class="hr-hand"></div>
+        </div>
+        
+      </div>
+      <!-- ----------------------- -->
+      
+      <div class="wrapper">
+        <div class="display">
+          <div id="time"></div>
+        </div>
+        <span></span>
+        <span></span>
+      </div>
+      
+      
+    </div>
+
+    <!-- -----------------------------------script 1 for analog -->
+      <script>
+         (function() {
+           var time = new Date(), //we get this time from our pc time not from server
+           second = time.getSeconds() / 60 * 360,
+           minute = time.getMinutes() / 60 * 360 + time.getSeconds() / 60 *6,
+           hour = time.getHours() / 12 * 360 + time.getMinutes() /60 * 30,
+           animation = [
+             "@keyframes sec-hand{from{transform: rotate(" + second + "deg);}to{transform: rotate(" + (second  + 360) + "deg);}}",
+             "@keyframes min-hand{from{transform: rotate(" + minute + "deg);}to{transform: rotate(" + (minute + 360) + "deg);}}",
+             "@keyframes hr-hand{from{transform: rotate(" + hour + "deg);}to{transform: rotate(" + (hour + 360) + "deg);}}"
+           ].join("");
+           document.querySelector("#clock-animate").innerHTML = animation;
+         })();
+         
+      </script>
+
+      <!-- -------------------------------script 2 for Digital -->
+      <script>
+         setInterval(()=>{
+           const time = document.querySelector(".display #time");
+           let date = new Date();
+           let hours = date.getHours();
+           let minutes = date.getMinutes();
+           let seconds = date.getSeconds();
+           let day_night = "AM";
+           if(hours > 12){
+             day_night = "PM";
+             hours = hours - 12;
+           }
+           if(seconds < 10){
+             seconds = "0" + seconds;
+           }
+           if(minutes < 10){
+             minutes = "0" + minutes;
+           }
+           if(hours < 10){
+             hours = "0" + hours;
+           }
+           time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+         });
+      </script>
+   </body>
+</html>
