@@ -4,10 +4,11 @@
     margin: 0;
 }
 body{
-    background: url("https://source.unsplash.com/1600x900/?mountain"); 
+    /* background: url("https://source.unsplash.com/1600x900/?mountain"); 
     background-size: 100% auto;
     background-repeat: repeat-y;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background-color: #212529;
 }
 .body{
     
