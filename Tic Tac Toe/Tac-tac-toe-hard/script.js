@@ -336,13 +336,13 @@ const displayController = (() => {
 
     
 
-    document.getElementById("settings").addEventListener("click", () => {
-      if(bg.classList.contains("open")) {
-        bg.classList.remove("open")
-      } else {
-        bg.classList.add("open")
-      }
-    })
+    // document.getElementById("settings").addEventListener("click", () => {
+    //   if(bg.classList.contains("open")) {
+    //     bg.classList.remove("open")
+    //   } else {
+    //     bg.classList.add("open")
+    //   }
+    // })
 
     bg.addEventListener("click", event => {
       if(event.target === bg) {

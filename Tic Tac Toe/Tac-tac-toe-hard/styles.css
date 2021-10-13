@@ -1,6 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   position:relative;
   font-size: 50px;
+  background-image: url("https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: monospace;
 }
 
@@ -13,18 +21,16 @@ table, td {
   font-size: 50px;
   font-family: monospace;
   text-align: center;
-  border: 1px black solid;
+  border: 1px white solid;
   border-collapse: collapse;
 }
 
 table {
-  position: absolute;
-  top: 125px;
-  left:50%;
-  margin-left: -100px;
-  table-layout: fixed;
+
   width: 200px;
   height: 200px;
+  margin: auto;
+  color:white;
 }
 
 td {
@@ -66,7 +72,7 @@ input[type="text"] {
 }
 
 .g:hover {
-  background-color: #eee;
+  background-color: rgb(77, 88, 77);
 }
 
 input[type="button"]:hover, button:hover {
@@ -93,30 +99,14 @@ input[type="checkbox"]:checked {
 }
 
 .game {
-  width: 15%;
+  width: 24%;
+  height: 21%;
   padding: 25px 15px;
 }
 
-#controls {
-  position: absolute;
-  left: 50%;
-  top: 350px;
-  margin-left: -135px;
-}
 
-/* #p1 {
-  position:absolute;
-  margin-left: 25%;
-  top: 175px;
-  left:0;
-}
 
-#p2 {
-  position: absolute;
-  margin-right: 25%;
-  top: 175px;
-  right: 0;
-} */
+
 
 [data-my-turn="true"] {
   border: 4px solid rgb(172, 172, 255);
@@ -129,7 +119,7 @@ input[type="checkbox"]:checked {
 
 [winner="true"] {
   border: 4px solid white;
-  background-color: rgb(172, 255, 172);
+  background-color:#6c5959;
 }
 
 .open {
@@ -141,4 +131,5 @@ input[type="checkbox"]:checked {
   text-align: center;
   justify-content: center;
   align-items: center;
+  color: white;
 }
