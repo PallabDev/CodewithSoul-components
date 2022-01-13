@@ -1,0 +1,44 @@
+#titleText{
+    color: blue;
+}
+#mainText{
+    color: blue;
+}
+.heading{
+    color: blue;
+}
+#titleText::placeholder{
+    color: blue;
+}
+#mainText::placeholder{
+    color: blue;
+}
+.form-label{
+    color: blue;
+}
+.inputBox{
+    width: 400px;
+    height: 250px;
+    /* border: 2px solid red; */
+    margin: auto auto!important;
+}
+body{
+    background-image: url('https://images.unsplash.com/photo-1560931296-2e14600386ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    
+}
+
+.button{
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+}
